@@ -42,24 +42,40 @@ interests:
   - AI Ethics
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: PhD Candidate, Applied Mathematics
+    institution: Delft University of Technology (TU Delft)
+    start: 2014-01-01
+    end: 2018-12-31
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
+      PhD research focused on numerical methods for reservoir simulation.
+      Dissertation: *POD-based deflation method for reservoir simulation*.
+      Advisors: Kees Vuik and Jan Dirk Jansen.
     button:
-      text: Download dissertation
-      url: /resume.pdf
+      text: View dissertation
+      url: https://www.researchgate.net/publication/332330352_POD-based_deflation_method_for_reservoir_simulation
       icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+
+  - degree: Master of Science (MS), Materials Science
+    institution: Universidad Nacional Autónoma de México (UNAM)
+    start: 2011-08-01
+    end: 2014-08-31
+    summary: |
+      Master's thesis on optical methods for materials characterization.
+      Thesis: *Dynamic Speckle for Materials Characterization*
+      (Spanish: *Speckle dinámico para la caracterización de materiales*).
+      Advisors: Tupak Ernesto García Fernández, Mayo Villagrán Muniz,
+      and Francisco Manuel Sánchez Arévalo.
+
+  - degree: Bachelor in Physics (Optics)
+    institution: Universidad Nacional Autónoma de México (UNAM)
+    start: 2005-08-01
+    end: 2010-08-31
+    summary: |
+      Undergraduate studies in Physics with specialization in Optics.
+      Bachelor's thesis: *Laser ablation of NiMnSn and NiMnIn alloys for obtaining thin films*
+      (Spanish: *Ablación láser de aleaciones de NiMnSn y NiMnIn para la obtención de películas delgadas*).
+      Advisor: Tupak Ernesto García Fernández.
+
 
 experience:
   - role: Senior AI Research Scientist
