@@ -16,17 +16,23 @@ authors:
 - admin
 
 ---
-<div style="width:100vw; margin-left:calc(-50vw + 50%);">
+<div style="margin-bottom:20px;">
 
-<iframe 
-src="/notebooks/Reynolds_Notebook.html"
-width="100%"
-height="2000px"
+<a href="/notebooks/Reynolds_Notebook.ipynb" download
 style="
-border:none;
-overflow:hidden;
+background:#0b3d91;
+color:white;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+margin-right:10px;
+display:inline-block;
 ">
-</iframe>
+
+⬇ Download Notebook (.ipynb)
+
+</a>
 
 </div> 
 
