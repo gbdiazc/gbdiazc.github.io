@@ -42,11 +42,15 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        I am a physicist specializing in computational modeling,
+          transport in porous media, and numerical methods for reservoir simulation.
+        My research focuses on modeling fluids flow through porous media, physics-informed neural networks (PINNs),
+          optimization methods, and high-performance solvers for multiphase flow problems.
+        I am interested in scientific computing, machine learning for physics,
+          and applied mathematics.
+          
+    Feel free to reach out for collaborations or academic discussions.😃
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-
-        Please reach out to collaborate 😃
     design:
       columns: '1'
   - block: collection
