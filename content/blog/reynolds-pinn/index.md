@@ -37,7 +37,7 @@ display:inline-block;
 
 
 <iframe 
-src="/notebooks/Reynolds_Notebook.html"
+src="https://gbdiazc.github.io/notebooks/Reynolds_Notebook.html"
 width="100%"
 height="2000px"
 style="border:none;">
