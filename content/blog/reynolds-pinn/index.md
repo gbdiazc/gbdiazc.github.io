@@ -16,10 +16,18 @@ authors:
 - admin
 
 ---
+<div style="width:100vw; margin-left:calc(-50vw + 50%);">
+
 <iframe 
 src="/notebooks/Reynolds_Notebook.html"
 width="100%"
-height="900px"
-style="border:none;">
+height="2000px"
+style="
+border:none;
+overflow:hidden;
+">
 </iframe>
+
+</div> 
+
 
