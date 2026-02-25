@@ -43,13 +43,9 @@ sections:
       subtitle: ''
       text: |-
         I am a physicist specializing in computational modeling,
-          transport in porous media, and numerical methods for reservoir simulation.
-        My research focuses on modeling fluids flow through porous media, physics-informed neural networks (PINNs),
-          optimization methods, and high-performance solvers for multiphase flow problems.
-        I am interested in scientific computing, machine learning for physics,
-          and applied mathematics.
-          
-    Feel free to reach out for collaborations or academic discussions.😃
+        porous media transport, and reservoir simulation.
+        My research focuses on PINNs and numerical solvers.
+        Feel free to reach out for collaborations or academic discussions 😃.
 
     design:
       columns: '1'
