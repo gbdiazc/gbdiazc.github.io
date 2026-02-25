@@ -6,6 +6,9 @@ draft: false
 summary: >
  Implementation of a PINN to solve the Reynolds boundary value problem.
 
+image:
+  filename: PINN_Reynolds.png
+  
 tags:
 - PINNs
 - Fluid Mechanics
