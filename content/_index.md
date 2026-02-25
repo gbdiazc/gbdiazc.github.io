@@ -42,9 +42,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        I am a physicist specializing in computational modeling,
-
-        porous media transport and reservoir simulation.
+        I am a physicist specializing in computational modeling, porous media transport and reservoir simulation.
 
         I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
 
