@@ -43,9 +43,7 @@ sections:
       subtitle: ''
       text: |-
         I am a physicist specializing in computational modeling,
-        porous media transport, and reservoir simulation.
-        My research focuses on PINNs and numerical solvers.
-        Feel free to reach out for collaborations or academic discussions 😃.
+
 
     design:
       columns: '1'
