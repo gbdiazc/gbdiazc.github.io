@@ -1,4 +1,3 @@
----
 # Leave the homepage title empty to use the site title
 title: ''
 summary: ''
@@ -42,7 +41,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        I am a physicist specializing in computational modeling, porous media transport and reservoir simulation.
+        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
 
         I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
 
@@ -129,3 +128,4 @@ sections:
         css_class: 'bg-primary-300 dark:bg-primary-700'
         css_style: ''
 ---
+
