@@ -67,3 +67,7 @@ Desktop.ini
 
 *.log
 npm-debug.log*
+
+# Private CV sources and local tooling
+CV_GBDC/
+.claude/

@@ -16,7 +16,8 @@ tags:
 - Reynolds Equation
 
 authors:
-- Zoila Sánchez, Gabriela Díaz
+- Zoila Sánchez
+- me
 
 ---
 <div style="margin-bottom:20px;">
@@ -40,7 +41,7 @@ display:inline-block;
 
 
 <iframe 
-src="https://gbdiazc.github.io/notebooks/Reynolds_Notebook.html"
+src="/notebooks/Reynolds_Notebook.html"
 width="100%"
 height="2000px"
 style="border:none;">

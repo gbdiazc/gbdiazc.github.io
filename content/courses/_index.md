@@ -15,6 +15,7 @@ sections:
     id: courses
     content:
       title: Courses
+      count: 0
       filters:
         tag: Course
         kinds:
