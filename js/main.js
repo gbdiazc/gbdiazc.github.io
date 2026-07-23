@@ -61,7 +61,6 @@
   });
   $("#heroPhoto").src = SITE.photo;
   $("#heroPhoto").alt = SITE.name;
-  $("#cvLink").href = SITE.cvFile;
   $("#contactEmail").href = "mailto:" + SITE.links.email;
   $("#portraitCard").innerHTML =
     `${esc(SITE.title)} · <a href="${esc(SITE.affiliationUrl)}" target="_blank" rel="noopener">${esc(SITE.affiliation)}</a>`;

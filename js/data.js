@@ -412,6 +412,8 @@ const SITE = {
       org: "IIM, UNAM, Mexico City",
       text: "Thesis: Dynamic Speckle for Materials Characterization.",
       kind: "edu",
+      link: "https://repositorio.unam.mx/contenidos/speckle-dinamico-para-la-caracterizacion-de-materiales-93426",
+      linkText: "View thesis",
     },
     {
       year: "2005 — 2010",
@@ -419,6 +421,8 @@ const SITE = {
       org: "Facultad de Ciencias, UNAM, Mexico City",
       text: "Thesis: Laser ablation of NiMnSn and NiMnIn alloys for thin films.",
       kind: "edu",
+      link: "https://repositorio.unam.mx/contenidos/ablacion-laser-de-aleaciones-de-nimnsn-y-nimnin-para-la-obtencion-de-peliculas-delgadas-227295",
+      linkText: "View thesis",
     },
   ],
 
