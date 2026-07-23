@@ -7,7 +7,7 @@
 
 const SITE = {
   // ---------------------------------------------------------------- identity
-  name: "Gabriela B. Díaz Cortés",
+  name: "Dr. Gabriela B. Díaz Cortés",
   shortName: "Gabriela Díaz",
   title: "Dr.",
   role: "Research Scientist · Applied Mathematics & Scientific Computing",
