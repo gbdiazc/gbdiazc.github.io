@@ -145,6 +145,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.04; letter-spacing: -.02em;
   margin: 0 0 14px;
 }
+.hero-affiliation { font-size: .95rem; font-weight: 600; margin: 0 0 6px; }
+.hero-affiliation a { color: var(--accent); }
 .hero-role { font-size: 1.08rem; color: var(--ink-soft); margin: 0 0 18px; font-weight: 500; }
 .hero-keyword { font-size: 1.2rem; margin: 0 0 18px; font-weight: 600; min-height: 1.8em; }
 .keyword-rotator {
@@ -191,14 +193,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   50%  { border-radius: 55% 45% 46% 54% / 44% 55% 45% 56%; }
   100% { border-radius: 48% 52% 58% 42% / 52% 44% 56% 48%; }
 }
-.portrait-card {
-  position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
-  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
-  box-shadow: var(--shadow); padding: 9px 18px; font-size: .85rem; font-weight: 600;
-  white-space: nowrap;
-}
-.portrait-card a { color: var(--accent); }
-
 .scroll-hint {
   position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
   width: 26px; height: 42px; border: 2px solid var(--ink-soft); border-radius: 999px;

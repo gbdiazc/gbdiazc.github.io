@@ -63,7 +63,7 @@
   $("#heroPhoto").src = SITE.photo;
   $("#heroPhoto").alt = SITE.name;
   $("#contactEmail").href = "mailto:" + SITE.links.email;
-  $("#portraitCard").innerHTML =
+  $("#heroAffiliation").innerHTML =
     `<a href="${esc(SITE.affiliationUrl)}" target="_blank" rel="noopener">${esc(SITE.affiliation)}</a>`;
   $("#year").textContent = new Date().getFullYear();
 
