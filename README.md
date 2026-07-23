@@ -1,34 +1,58 @@
-# gbdiazc.github.io
+# Academic Portfolio — plain HTML/CSS/JS
 
-Personal academic website of **Dr. Gabriela Berenice Díaz Cortés** — researcher at the Mexican Institute of Petroleum (IMP), working on reservoir simulation, porous media flow, physics-informed neural networks (PINNs), optimization and scientific computing.
+A modern, interactive academic portfolio with **zero dependencies and zero build step**.
+Open `index.html` in a browser and it works. Nothing to install, nothing that can break.
 
-🌐 **Live site: [gbdiazc.github.io](https://gbdiazc.github.io)**
+**Features**
 
-## About this repository
+- Editorial design with light/dark mode, scroll animations and a bento "at a glance" grid
+- Filterable & searchable publications with one-click **Copy BibTeX**
+- Built-in **Jupyter notebook viewer** (modal) with `.ipynb` download
+- GitHub repositories **fetched live** from the GitHub API — always up to date
+- Teaching, supervision, talks, awards, languages, timeline — all data-driven
+- Fully responsive, accessible, respects `prefers-reduced-motion`
 
-Built with [Hugo](https://gohugo.io/) and the [Hugo Blox](https://hugoblox.com/) academic CV template. Deployed automatically to GitHub Pages via GitHub Actions on every push to `main`.
+## Customize (or adapt for another person) in 3 steps
 
-### Editing content
+1. **Edit `js/data.js`** — every text on the site lives in this one file:
+   name, bio, publications, projects, talks, teaching, students, awards…
+   Set `githubUser` to any GitHub username and the repos section updates itself.
+2. **Replace the images** — `assets/img/profile.png` (your photo) and `files/cv.pdf` (your CV).
+3. **Optional: change the look** — colors, fonts and roundness are CSS variables at the
+   top of `css/styles.css` (`--accent`, `--font-display`, `--radius`…). Change one line,
+   change the whole site.
 
-| What | Where |
-|------|-------|
-| Profile, bio, experience, skills, awards | `data/authors/me.yaml` |
-| Profile photo | `assets/media/authors/me.png` |
-| Homepage sections | `content/_index.md` |
-| Publications | `content/publications/<name>/index.md` + `cite.bib` |
-| Talks & conferences | `content/events/<name>/index.md` |
-| Courses | `content/courses/<name>/_index.md` |
-| Projects | `content/projects/<name>/index.md` |
-| Blog posts | `content/blog/<name>/index.md` |
-| Downloadable CV (PDF) | `static/uploads/resume.pdf` |
+That's it. No terminal, no build, no framework.
 
-### Running locally
+## Preview locally
 
-Requires Hugo (extended), Go and Node.js:
+Any static server works (needed for the notebook viewer iframe):
 
 ```bash
-npm install   # first time only
-hugo server   # then open http://localhost:1313
+# with Python
+python -m http.server 8080
+# then open http://localhost:8080
 ```
 
-Preview changes locally before pushing — errors will show in the terminal instead of breaking the live site.
+Or just double-click `index.html` (everything works except the notebook iframe on some browsers).
+
+## Deploy
+
+- **GitHub Pages:** push this folder to a repo → Settings → Pages → Source: *GitHub Actions*
+  or *Deploy from branch* (this site has no build, so branch deploys are safe here).
+- **Netlify / Vercel / Cloudflare Pages:** drag & drop the folder. Done.
+
+## Structure
+
+```
+index.html          page structure (sections)
+css/styles.css      design system (variables at top) + styles
+js/data.js          ← ALL your content (the only file you edit)
+js/main.js          rendering & interactions (no need to touch)
+assets/img/         profile photo + figures
+notebooks/          Jupyter notebooks (.html export + .ipynb)
+files/              CV pdf
+```
+
+To add a notebook: export it from Jupyter as HTML (`File → Save and Export → HTML`),
+drop both files in `notebooks/`, and add an entry to `notebooks:` in `js/data.js`.

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabriela B. Díaz Cortés — Applied Mathematics & Scientific Computing</title>
+  <meta name="description" content="Research scientist at the Mexican Institute of Petroleum: reservoir simulation, physics-informed neural networks, optimization and scientific computing." />
+  <meta property="og:title" content="Gabriela B. Díaz Cortés" />
+  <meta property="og:description" content="Applied mathematics, PINNs and reservoir simulation." />
+  <meta property="og:image" content="assets/img/profile.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%235b21b6'>G</text></svg>" />
+</head>
+<body>
+
+  <!-- ======================================================= header / nav -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-brand" href="#top" data-text="short-name"></a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#code">Code &amp; Notebooks</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================================================= hero -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-hello reveal">Hello, I'm</p>
+          <h1 class="hero-name reveal" data-text="name"></h1>
+          <p class="hero-role reveal" data-text="role"></p>
+          <p class="hero-keyword reveal">I work on <span class="keyword-rotator" id="keywordRotator"></span></p>
+          <p class="hero-tagline reveal" data-text="tagline"></p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#publications">Explore my work
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" id="cvLink" href="#" download>Download CV</a>
+          </div>
+          <div class="hero-social reveal" id="heroSocial"></div>
+        </div>
+        <div class="hero-portrait reveal">
+          <div class="portrait-frame">
+            <img id="heroPhoto" src="" alt="Portrait" width="380" height="380" />
+          </div>
+          <div class="portrait-card" id="portraitCard"></div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#glance" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ============================================================= about -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <p class="eyebrow reveal">About</p>
+        <h2 class="section-title reveal">Research areas</h2>
+        <div class="research-grid" id="researchGrid"></div>
+
+        <h3 class="subsection-title reveal" style="margin-top: 3rem;">Trajectory</h3>
+        <div class="about-layout">
+          <div class="about-text reveal" id="aboutText"></div>
+          <div class="about-side reveal">
+            <h4 class="subsection-title">Languages</h4>
+            <div id="langList"></div>
+          </div>
+        </div>
+
+        <h3 class="subsection-title reveal">Timeline</h3>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- ====================================================== awards -->
+    <section class="section" id="awards">
+      <div class="container">
+        <p class="eyebrow reveal">Recognition</p>
+        <h2 class="section-title reveal">Awards &amp; grants</h2>
+        <div class="awards-layout">
+          <div class="awards-col reveal">
+            <h3 class="subsection-title">Awards</h3>
+            <ul class="award-list" id="awardList"></ul>
+          </div>
+          <div class="awards-col reveal">
+            <h3 class="subsection-title">Continuing education</h3>
+            <ul class="cert-list" id="certList"></ul>
+          </div>
+        </div>
+        <h3 class="subsection-title reveal">Talks &amp; conferences</h3>
+        <div class="talk-grid" id="talkGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================== projects -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <p class="eyebrow reveal">Projects</p>
+        <h2 class="section-title reveal">Research projects</h2>
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================================================== teaching & sup -->
+    <section class="section" id="teaching">
+      <div class="container">
+        <p class="eyebrow reveal">Mentoring</p>
+        <h2 class="section-title reveal">Teaching &amp; supervision</h2>
+        <div class="teach-columns">
+          <div class="teach-col reveal">
+            <h3 class="subsection-title">Courses taught</h3>
+            <ul class="teach-list" id="teachList"></ul>
+          </div>
+          <div class="teach-col reveal">
+            <h3 class="subsection-title">Students supervised</h3>
+            <ul class="student-list" id="studentList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== publications -->
+    <section class="section section-alt" id="publications">
+      <div class="container">
+        <p class="eyebrow reveal">Publications</p>
+        <h2 class="section-title reveal">Papers &amp; conferences</h2>
+        <div class="pub-controls reveal">
+          <div class="pub-filters" id="pubFilters" role="group" aria-label="Filter publications">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="journal">Journal articles</button>
+            <button class="chip" data-filter="conference">Conference papers</button>
+          </div>
+          <input class="pub-search" id="pubSearch" type="search" placeholder="Search title, author, venue…" aria-label="Search publications" />
+        </div>
+        <div class="pub-list" id="pubList"></div>
+      </div>
+    </section>
+
+    <!-- =============================================== code & notebooks -->
+    <section class="section" id="code">
+      <div class="container">
+        <p class="eyebrow reveal">Open science</p>
+        <h2 class="section-title reveal">Code &amp; Notebooks</h2>
+        <p class="section-lead reveal">Interactive Jupyter notebooks from my papers, and repositories loaded live from GitHub.</p>
+
+        <div class="notebook-grid" id="notebookGrid"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================== software -->
+    <section class="section section-alt" id="software">
+      <div class="container">
+        <p class="eyebrow reveal">Intellectual property</p>
+        <h2 class="section-title reveal">Registered software</h2>
+        <div class="software-list" id="softwareList"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================== contact -->
+    <section class="section section-contact" id="contact">
+      <div class="container contact-inner reveal">
+        <h2 class="contact-title">Let's collaborate</h2>
+        <p class="contact-text">Interested in PINNs, reservoir simulation, optimization or the energy transition? I'd love to hear from you.</p>
+        <a class="btn btn-primary btn-lg" id="contactEmail" href="#">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>
+          <span data-text="email"></span>
+        </a>
+        <div class="hero-social" id="contactSocial"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> <span data-text="name"></span>. Built with plain HTML, CSS &amp; JavaScript — no frameworks, nothing to break.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- =================================================== notebook modal -->
+  <div class="modal" id="nbModal" role="dialog" aria-modal="true" aria-label="Notebook viewer" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <div class="modal-bar">
+        <strong id="nbModalTitle">Notebook</strong>
+        <div class="modal-actions">
+          <a class="btn btn-ghost btn-sm" id="nbModalDownload" href="#" download>Download .ipynb</a>
+          <button class="btn btn-ghost btn-sm" data-close aria-label="Close">✕ Close</button>
+        </div>
+      </div>
+      <iframe id="nbModalFrame" title="Jupyter notebook" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
