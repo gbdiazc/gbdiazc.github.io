@@ -9,7 +9,7 @@ const SITE = {
   // ---------------------------------------------------------------- identity
   name: "Dr. Gabriela B. Díaz Cortés",
   shortName: "Gabriela Díaz",
-  title: "Dr.",
+  title: "Dr",
   role: "Research Scientist · Applied Mathematics & Scientific Computing",
   affiliation: "Mexican Institute of Petroleum (IMP)",
   affiliationUrl: "https://www.gob.mx/imp",

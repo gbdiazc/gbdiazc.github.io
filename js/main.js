@@ -64,7 +64,7 @@
   $("#heroPhoto").alt = SITE.name;
   $("#contactEmail").href = "mailto:" + SITE.links.email;
   $("#portraitCard").innerHTML =
-    `${esc(SITE.title)} <a href="${esc(SITE.affiliationUrl)}" target="_blank" rel="noopener">${esc(SITE.affiliation)}</a>`;
+    `<a href="${esc(SITE.affiliationUrl)}" target="_blank" rel="noopener">${esc(SITE.affiliation)}</a>`;
   $("#year").textContent = new Date().getFullYear();
 
   const socialHTML = [
