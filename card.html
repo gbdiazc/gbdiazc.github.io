@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabriela B. Díaz Cortés — Digital Business Card</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%235b21b6'>G</text></svg>" />
+  <style>
+    :root {
+      --accent: #5b21b6; --accent-soft: #7c3aed; --accent-2: #0ea5a4;
+      --bg: #faf9f7; --bg-alt: #f1efeb; --surface: #ffffff;
+      --ink: #1c1917; --ink-soft: #57534e; --line: #e7e5e0;
+      --shadow: 0 1px 2px rgb(28 25 23 / .05), 0 8px 24px -12px rgb(28 25 23 / .18);
+      --shadow-lg: 0 2px 4px rgb(28 25 23 / .06), 0 24px 48px -16px rgb(28 25 23 / .25);
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --radius: 20px; --radius-sm: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #a78bfa; --accent-soft: #8b5cf6; --accent-2: #2dd4bf;
+        --bg: #0f0e13; --bg-alt: #16141d; --surface: #1d1a26;
+        --ink: #f2f0f7; --ink-soft: #a8a3b3; --line: #2b2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--bg-alt);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 28px 16px;
+      background-image: radial-gradient(700px 400px at 50% -10%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%);
+    }
+    .card {
+      width: 100%; max-width: 400px; background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .card-hero {
+      padding: 32px 28px 24px; text-align: center;
+      background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%);
+    }
+    .card-photo {
+      width: 104px; height: 104px; border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--surface); box-shadow: var(--shadow);
+      margin: 0 auto 16px; display: block;
+    }
+    .card-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 0 0 4px; }
+    .card-title { color: var(--ink-soft); font-size: .9rem; margin: 0 0 2px; }
+    .card-org { color: var(--accent); font-size: .88rem; font-weight: 600; margin: 0; }
+
+    .card-body { padding: 4px 24px 24px; }
+
+    .contact-list { list-style: none; margin: 0 0 20px; padding: 0; }
+    .contact-list li {
+      display: flex; align-items: center; gap: 12px; padding: 11px 4px;
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-list li:last-child { border-bottom: none; }
+    .contact-list a {
+      color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500;
+      display: flex; align-items: center; gap: 12px; width: 100%;
+    }
+    .contact-icon {
+      width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+      background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-label { color: var(--ink-soft); font-size: .72rem; display: block; }
+    .contact-value { font-size: .9rem; }
+
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 14px 20px; border-radius: var(--radius-sm);
+      font-family: var(--font-body); font-weight: 600; font-size: .95rem;
+      text-decoration: none; border: none; cursor: pointer; transition: .15s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; margin-bottom: 10px; }
+    .btn-primary:hover { background: var(--accent-soft); }
+    .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    .qr-section {
+      margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    .qr-section img { width: 140px; height: 140px; border-radius: var(--radius-sm); }
+    .qr-caption { color: var(--ink-soft); font-size: .78rem; margin: 10px 0 0; }
+
+    .socials { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
+    .socials a {
+      width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: var(--bg-alt); color: var(--ink-soft); transition: .15s;
+    }
+    .socials a:hover { background: var(--accent); color: #fff; }
+    .socials svg { width: 16px; height: 16px; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-hero">
+      <img class="card-photo" src="assets/img/profile.png" alt="Gabriela B. Díaz Cortés" />
+      <h1 class="card-name">Gabriela B. Díaz Cortés</h1>
+      <p class="card-title">Research Scientist · Applied Mathematics &amp; Scientific Computing</p>
+      <p class="card-org">Instituto Mexicano del Petróleo (IMP)</p>
+    </div>
+
+    <div class="card-body">
+      <ul class="contact-list">
+        <li>
+          <a href="tel:+525538876189">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span><span class="contact-label">Personal phone</span><span class="contact-value">+52 55 3887 6189</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+525591757543">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span><span class="contact-label">Office phone (IMP)</span><span class="contact-value">+52 55 9175 7543</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:gbdiaz@imp.mx">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg></span>
+            <span><span class="contact-label">Email</span><span class="contact-value">gbdiaz@imp.mx</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://gbdiazc.github.io/" target="_blank" rel="noopener">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span><span class="contact-label">Website</span><span class="contact-value">gbdiazc.github.io</span></span>
+          </a>
+        </li>
+      </ul>
+
+      <a class="btn btn-primary" href="files/gabriela-diaz-cortes.vcf" download="Gabriela-Diaz-Cortes.vcf">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        Add to Contacts
+      </a>
+      <a class="btn btn-ghost" href="https://gbdiazc.github.io/" target="_blank" rel="noopener">Visit full portfolio ↗</a>
+
+      <div class="qr-section">
+        <img src="assets/img/contact-qr.png" alt="QR code to save this contact" loading="lazy" />
+        <p class="qr-caption">Scan to save this contact on another phone</p>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/gbdiazcortes/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=hKuGzcIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l4 2.18V17c0 .55.45 1 1 1h1v-5.73L12 15l11-6-11-6zm0 13.09L8 13.91V17a4 4 0 0 0 8 0v-3.09l-4 2.18z"/></svg>
+        </a>
+        <a href="https://github.com/gbdiazc" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.45.11-3.03 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.24 2.74.12 3.03.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1v3.12c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
