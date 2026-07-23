@@ -437,15 +437,22 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .award-list strong { display: block; font-size: .9rem; }
 .award-list span { color: var(--ink-soft); font-size: .82rem; }
 
-.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline {
+  list-style: none; margin: 0; padding: 20px 4px 24px; position: relative;
+  display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
 .timeline::before {
-  content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px;
-  background: linear-gradient(var(--accent), var(--accent-2));
+  content: ""; position: absolute; left: 0; right: 0; top: 27px; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   border-radius: 2px;
 }
-.timeline li { position: relative; padding: 0 0 26px 36px; }
+.timeline li {
+  position: relative; flex: 0 0 auto; width: min(300px, 78vw);
+  padding: 26px 20px 0 0; scroll-snap-align: start;
+}
 .timeline li::before {
-  content: ""; position: absolute; left: 0; top: 6px; width: 16px; height: 16px;
+  content: ""; position: absolute; left: 0; top: 20px; width: 16px; height: 16px;
   border-radius: 50%; background: var(--surface); border: 3px solid var(--accent);
 }
 .timeline li.edu::before { border-color: var(--accent-2); }
@@ -453,7 +460,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .timeline li.edu .tl-year { color: var(--accent-2); }
 .tl-title { font-weight: 700; font-size: 1.02rem; margin: 2px 0; }
 .tl-org { color: var(--ink-soft); font-size: .88rem; font-weight: 600; }
-.tl-text { color: var(--ink-soft); font-size: .9rem; margin: 6px 0 0; max-width: 72ch; }
+.tl-text { color: var(--ink-soft); font-size: .9rem; margin: 6px 0 0; max-width: 40ch; }
 .tl-link { font-size: .85rem; font-weight: 600; }
 
 .talk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
