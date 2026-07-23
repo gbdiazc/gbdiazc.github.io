@@ -437,7 +437,6 @@ const SITE = {
     { name: "Rodrigo Vázquez Garduño", degree: "Internship · main tutor", topic: "Reservoir simulation", org: "IMP", status: "2022", done: true },
     { name: "Mario Espinosa Cortés", degree: "Internship · main tutor", topic: "Database management for bibliometric analysis", org: "IMP", status: "2023", done: true },
     { name: "Maitá Micol", degree: "Internship · co-tutor", topic: "High-energy emissions around black holes with AI techniques", org: "CBPF, Brazil", status: "2023", done: true },
-    { name: "José de J. Sánchez Limón", degree: "Internship · co-tutor", topic: "Flow-unit identification with ML for water coning simulation", org: "IMP", status: "Ongoing", done: false },
   ],
 
   // ---------------------------------------------------------------- teaching
