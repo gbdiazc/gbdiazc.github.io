@@ -29,6 +29,7 @@
     linkedin: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>',
     scholar: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3 1 9l4 2.18V17c0 .55.45 1 1 1h1v-5.73L12 15l11-6-11-6zm0 13.09L8 13.91V17a4 4 0 0 0 8 0v-3.09l-4 2.18z"/></svg>',
     orcid: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM8.4 7.1a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9zm-.75 3h1.5v7.15h-1.5V10.1zm3.4 0h3.1c2.95 0 4.25 1.7 4.25 3.6 0 1.95-1.55 3.55-4.25 3.55h-3.1V10.1zm1.5 1.35v4.45h1.55c1.95 0 2.75-1.15 2.75-2.2 0-1.2-.75-2.25-2.75-2.25h-1.55z"/></svg>',
+    researchgate: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.5 3H4.5A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3zM8.9 17.6H7V9.8h1.9v7.8zm-.95-8.85a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2zM17.6 17.6h-1.9v-4.1c0-.98-.02-2.24-1.37-2.24-1.37 0-1.58 1.07-1.58 2.17v4.17h-1.9V9.8h1.83v1.07h.03c.25-.48.88-1 1.82-1 1.94 0 2.3 1.28 2.3 2.94v4.79h.76z"/></svg>',
     mail: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>',
     star: '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>',
     fork: '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9M12 15v-2"/></svg>',
@@ -71,6 +72,7 @@
     ["github", SITE.links.github, "GitHub"],
     ["linkedin", SITE.links.linkedin, "LinkedIn"],
     ["scholar", SITE.links.scholar, "Google Scholar"],
+    ["researchgate", SITE.links.researchgate, "ResearchGate"],
     ["orcid", SITE.links.orcid, "ORCID"],
   ].map(([icon, url, label]) =>
     `<a href="${esc(url)}" target="_blank" rel="noopener" aria-label="${label}" title="${label}">${ICONS[icon]}</a>`

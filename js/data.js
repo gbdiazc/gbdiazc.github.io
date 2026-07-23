@@ -41,6 +41,7 @@ const SITE = {
     github: "https://github.com/gbdiazc",
     linkedin: "https://www.linkedin.com/in/gbdiazcortes/",
     scholar: "https://scholar.google.com/citations?user=hKuGzcIAAAAJ&hl=en&oi=ao",
+    researchgate: "https://www.researchgate.net/profile/Gabriela-Diaz-46?ev=hdr_xprf",
     orcid: "https://orcid.org/0000-0003-2460-3482",
   },
 

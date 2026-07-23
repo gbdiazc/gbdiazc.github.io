@@ -441,15 +441,12 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   list-style: none; margin: 0; padding: 14px 4px 18px; position: relative;
   display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin; scrollbar-color: var(--accent) transparent;
+  scrollbar-width: none; -ms-overflow-style: none;
 }
-.timeline::-webkit-scrollbar { height: 6px; }
-.timeline::-webkit-scrollbar-track { background: transparent; }
-.timeline::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
-.timeline::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+.timeline::-webkit-scrollbar { display: none; }
 .timeline li {
-  position: relative; flex: 0 0 auto; width: min(220px, 68vw); box-sizing: border-box;
-  padding: 20px 18px 0 0; margin: 0; border-top: 3px solid var(--accent);
+  position: relative; flex: 1 1 0; min-width: 150px; max-width: 210px; box-sizing: border-box;
+  padding: 20px 16px 0 0; margin: 0; border-top: 3px solid var(--accent);
   scroll-snap-align: start;
 }
 .timeline li.edu { border-top-color: var(--accent-2); }
