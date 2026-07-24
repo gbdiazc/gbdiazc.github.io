@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mtro. Christian Hernández Martínez — Tarjeta Digital</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%235b21b6'>C</text></svg>" />
+  <style>
+    :root {
+      --accent: #5b21b6; --accent-soft: #7c3aed; --accent-2: #0ea5a4;
+      --bg: #faf9f7; --bg-alt: #f1efeb; --surface: #ffffff;
+      --ink: #1c1917; --ink-soft: #57534e; --line: #e7e5e0;
+      --shadow: 0 1px 2px rgb(28 25 23 / .05), 0 8px 24px -12px rgb(28 25 23 / .18);
+      --shadow-lg: 0 2px 4px rgb(28 25 23 / .06), 0 24px 48px -16px rgb(28 25 23 / .25);
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --radius: 20px; --radius-sm: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #a78bfa; --accent-soft: #8b5cf6; --accent-2: #2dd4bf;
+        --bg: #0f0e13; --bg-alt: #16141d; --surface: #1d1a26;
+        --ink: #f2f0f7; --ink-soft: #a8a3b3; --line: #2b2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--bg-alt);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 28px 16px;
+      background-image: radial-gradient(700px 400px at 50% -10%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%);
+    }
+    .card {
+      width: 100%; max-width: 400px; background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .card-hero {
+      padding: 32px 28px 24px; text-align: center;
+      background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%);
+    }
+    .card-photo {
+      width: 104px; height: 104px; border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--surface); box-shadow: var(--shadow);
+      margin: 0 auto 16px; display: block;
+    }
+    .card-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 0 0 4px; }
+    .card-title { color: var(--ink-soft); font-size: .9rem; margin: 0 0 2px; }
+    .card-org { color: var(--accent); font-size: .88rem; font-weight: 600; margin: 0; }
+
+    .card-body { padding: 4px 24px 24px; }
+
+    .contact-list { list-style: none; margin: 0 0 20px; padding: 0; }
+    .contact-list li {
+      display: flex; align-items: center; gap: 12px; padding: 11px 4px;
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-list li:last-child { border-bottom: none; }
+    .contact-list a {
+      color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500;
+      display: flex; align-items: center; gap: 12px; width: 100%;
+    }
+    .contact-icon {
+      width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+      background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-label { color: var(--ink-soft); font-size: .72rem; display: block; }
+    .contact-value { font-size: .9rem; }
+
+    .qr-section {
+      margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    .qr-section img { width: 140px; height: 140px; border-radius: var(--radius-sm); }
+    .qr-caption { color: var(--ink-soft); font-size: .78rem; margin: 10px 0 0; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-hero">
+      <img class="card-photo" src="assets/img/christian.jpeg" alt="Christian Hernández Martínez" />
+      <h1 class="card-name">Mtro. Christian Hernández Martínez</h1>
+      <p class="card-title">Ingeniero Químico · Mtro. en Ingeniería (Innovación y Tecnología)</p>
+      <p class="card-org">Staff de la Dirección de Exploración y Producción · IMP</p>
+    </div>
+
+    <div class="card-body">
+      <ul class="contact-list">
+        <li>
+          <a href="tel:+525529221655">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span><span class="contact-label">Celular</span><span class="contact-value">+52 55 2922 1655</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+525591756463">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span><span class="contact-label">Teléfono oficina</span><span class="contact-value">+52 55 9175 6463</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:chmartin@imp.mx">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg></span>
+            <span><span class="contact-label">Correo</span><span class="contact-value">chmartin@imp.mx</span></span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="qr-section">
+        <img src="assets/img/christian-qr.png" alt="QR code to save this contact" loading="lazy" />
+        <p class="qr-caption">Escanea para guardar el contacto</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
