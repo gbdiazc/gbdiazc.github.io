@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mtro. Christian Hernández Martínez — Tarjeta Digital</title>
+  <title>Christian Hernández Martínez — Tarjeta Digital</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,8 +11,9 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%2315803d'>C</text></svg>" />
   <style>
     :root {
-      --accent: #15803d; --accent-soft: #16a34a; --accent-2: #0ea5a4;
-      --bg: #ffffff; --bg-alt: #ffffff; --surface: #ffffff;
+      --accent: #15803d; --accent-soft: #16a34a;
+      --grad-dark: #3b6d11; --grad-light: #97c459;
+      --bg-alt: #ffffff; --surface: #ffffff;
       --ink: #000000; --ink-soft: #3f3f3f; --line: #e5e5e5;
       --shadow: 0 1px 2px rgb(0 0 0 / .05), 0 8px 24px -12px rgb(0 0 0 / .18);
       --shadow-lg: 0 2px 4px rgb(0 0 0 / .06), 0 24px 48px -16px rgb(0 0 0 / .25);
@@ -25,27 +26,31 @@
       margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--bg-alt);
       min-height: 100vh; display: flex; align-items: center; justify-content: center;
       padding: 28px 16px;
-      background-image: radial-gradient(700px 400px at 50% -10%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%);
     }
     .card {
-      width: 100%; max-width: 400px; background: var(--surface); border: 1px solid var(--line);
+      width: 100%; max-width: 400px; background: var(--surface);
       border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden;
     }
     .card-hero {
-      padding: 32px 28px 24px; text-align: center;
-      background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%);
+      padding: 28px 28px 24px; text-align: center; color: #fff;
+      background: linear-gradient(160deg, var(--grad-dark), var(--grad-light));
     }
+    .card-logo-wrap {
+      display: inline-block; background: #fff; border-radius: var(--radius-sm);
+      padding: 8px 16px; margin: 0 0 18px;
+    }
+    .card-logo { height: 32px; display: block; }
     .card-photo {
       width: 104px; height: 104px; border-radius: 50%; object-fit: cover;
-      border: 3px solid var(--surface); box-shadow: var(--shadow);
+      border: 3px solid #fff; box-shadow: var(--shadow);
       margin: 0 auto 16px; display: block;
     }
-    .card-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 0 0 4px; }
-    .card-title { color: var(--ink-soft); font-size: .9rem; margin: 0 0 2px; }
-    .card-role { color: var(--ink-soft); font-size: .88rem; margin: 0 0 2px; }
-    .card-org { color: var(--accent); font-size: .88rem; font-weight: 600; margin: 0; }
+    .card-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 0 0 4px; color: #fff; }
+    .card-title { color: #eaf3de; font-size: .9rem; margin: 0 0 2px; }
+    .card-role { color: #eaf3de; font-size: .88rem; margin: 0 0 2px; }
+    .card-org { color: #fff; font-size: .88rem; font-weight: 600; margin: 0; }
 
-    .card-body { padding: 4px 24px 24px; }
+    .card-body { padding: 20px 24px 24px; }
 
     .contact-list { list-style: none; margin: 0 0 20px; padding: 0; }
     .contact-list li {
@@ -66,7 +71,7 @@
     .contact-value { font-size: .9rem; }
 
     .qr-section {
-      margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line);
+      margin-top: 4px; padding-top: 22px; border-top: 1px solid var(--line);
       text-align: center;
     }
     .qr-section img { width: 140px; height: 140px; border-radius: var(--radius-sm); }
@@ -77,6 +82,7 @@
 
   <div class="card">
     <div class="card-hero">
+      <span class="card-logo-wrap"><img class="card-logo" src="assets/img/imp-logo.png" alt="Instituto Mexicano del Petróleo" /></span>
       <img class="card-photo" src="assets/img/christian.jpeg" alt="Christian Hernández Martínez" />
       <h1 class="card-name">Christian Hernández Martínez</h1>
       <p class="card-title">Ingeniero Químico · Mtro. en Ingeniería (Innovación y Tecnología)</p>
