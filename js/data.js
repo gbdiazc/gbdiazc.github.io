@@ -458,7 +458,6 @@ const SITE = {
     { name: "Patricia Domínguez Ramírez", degree: "PhD · main tutor", topic: "Operating-window optimization through mathematical modeling & AI", org: "IMP", status: "2025 – present", done: false },
     { name: "Sindy D. Puerto Vargas", degree: "PhD · committee", topic: "AI models for hydrogen production from biomass gasification", org: "IMP", status: "Ongoing", done: false },
     { name: "José Samuel Espinosa Cuellar", degree: "Summer research program (BUAP) · advisor", topic: "AI-assisted petrophysical characterization of well logs (K-Means and KNN)", org: "IMP Summer Research Program 2026", status: "2026", done: true, link: "https://samuel19-cpu.github.io/Extrayendo-PEtroleo-con-IA/", linkText: "View project" },
-    { name: "Areli Monserrat Santana Guerrero", degree: "BSc thesis (IPN) · advisor", topic: "Modeling of geological hydrogen transport towards the surface", org: "IMP", status: "2026", done: false, link: "assets/img/poster-areli.jpg", linkText: "View poster" },
     { name: "Jenny Tjan", degree: "MSc · main tutor", topic: "Deflation techniques and POD methods for Krylov subspace acceleration", org: "TU Delft", status: "Graduated 2018", done: true },
     { name: "Rodrigo Vázquez Garduño", degree: "Internship · main tutor", topic: "Reservoir simulation", org: "IMP", status: "2022", done: true },
     { name: "Mario Espinosa Cortés", degree: "Internship · main tutor", topic: "Database management for bibliometric analysis", org: "IMP", status: "2023", done: true },
@@ -539,7 +538,7 @@ const SITE = {
     },
     {
       title: "Hidrógeno geológico: de fallas profundas a “círculos de hadas” superficiales",
-      student: "Areli Monserrat Santana-Guerrero · IPN",
+      student: "Areli Monserrat Santana-Guerrero · IPN · poster co-author",
       event: "2nd IMP Graduate Week 2026 · Oct 6–9",
       text: "Numerical simulation of the geological hydrogen system, from generation by serpentinization to migration towards the surface.",
       image: "assets/img/poster-areli.jpg",
