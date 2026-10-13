@@ -217,34 +217,6 @@
   modal.addEventListener("click", (e) => { if (e.target.closest("[data-close]")) closeModal(); });
   addEventListener("keydown", (e) => { if (e.key === "Escape" && !modal.hidden) closeModal(); });
 
-  /* -------------------------------------------------------- github repos */
-  const repoGrid = $("#repoGrid");
-  fetch(`https://api.github.com/users/${SITE.githubUser}/repos?per_page=100&sort=updated`)
-    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((repos) => {
-      const own = repos.filter((r) => !r.fork);
-      own.sort((a, b) => {
-        const pa = SITE.pinnedRepos.indexOf(a.name), pb = SITE.pinnedRepos.indexOf(b.name);
-        if (pa !== -1 || pb !== -1) return (pa === -1 ? 99 : pa) - (pb === -1 ? 99 : pb);
-        return b.stargazers_count - a.stargazers_count || new Date(b.pushed_at) - new Date(a.pushed_at);
-      });
-      repoGrid.innerHTML = own.slice(0, 9).map((r) => `
-        <a class="repo-card reveal in" href="${esc(r.html_url)}" target="_blank" rel="noopener">
-          <span class="repo-name">${ICONS.github} ${esc(r.name)}</span>
-          <p class="repo-desc">${esc(r.description || "No description yet.")}</p>
-          <div class="repo-meta">
-            ${r.language ? `<span><span class="repo-lang-dot" style="background:${LANG_COLORS[r.language] || "var(--accent)"}"></span>${esc(r.language)}</span>` : ""}
-            <span>${ICONS.star} ${r.stargazers_count}</span>
-            <span>${ICONS.fork} ${r.forks_count}</span>
-          </div>
-        </a>`).join("")
-        || `<p class="repo-error">No public repositories yet.</p>`;
-    })
-    .catch(() => {
-      repoGrid.innerHTML = `<p class="repo-error">Could not reach the GitHub API right now —
-        <a href="https://github.com/${esc(SITE.githubUser)}" target="_blank" rel="noopener">browse my repositories on GitHub ↗</a></p>`;
-    });
-
   /* ------------------------------------------------------------ projects */
   const THEMES = [
     ["#5b21b6", "#0ea5a4"], ["#0ea5a4", "#f59e0b"], ["#7c3aed", "#ec4899"],
@@ -289,8 +261,22 @@
       <span class="student-degree">${esc(s.degree)}</span>
       <div class="student-head"><strong>${esc(s.name)}</strong>
         <span class="student-status ${s.done ? "done" : ""}">${esc(s.status)}</span></div>
-      <span class="student-topic">${esc(s.topic)} — ${esc(s.org)}</span>
+      <span class="student-topic">${esc(s.topic)} — ${esc(s.org)}${s.link ? ` · <a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.linkText || "More")} ↗</a>` : ""}</span>
     </li>`).join("");
+
+  $("#studentWork").innerHTML = SITE.studentWork.map((w) => `
+    <article class="work-card reveal">
+      <a class="work-thumb" href="${esc(w.image)}" target="_blank" rel="noopener" aria-label="Open poster">
+        <img src="${esc(w.image)}" alt="Poster: ${esc(w.title)}" loading="lazy">
+      </a>
+      <div class="work-body">
+        <span class="work-event">${esc(w.event)}</span>
+        <h4>${esc(w.title)}</h4>
+        <p class="work-student">${esc(w.student)}</p>
+        <p>${esc(w.text)}</p>
+        <div class="work-links pub-links">${w.links.map((l) => `<a class="mini" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>
+      </div>
+    </article>`).join("");
 
   /* --------------------------------------------------------------- about */
   $("#aboutText").innerHTML = SITE.about.map((p) => `<p>${esc(p)}</p>`).join("");
@@ -303,7 +289,7 @@
 
   $("#awardList").innerHTML = SITE.awards.map((a) => `
     <li><span class="award-year">${a.year}</span>
-      <div><strong>${esc(a.title)}</strong><span>${esc(a.detail)}</span></div></li>`).join("");
+      <div><strong>${esc(a.title)}</strong><span>${esc(a.detail)}${a.link ? ` <a href="${esc(a.link)}" target="_blank" rel="noopener">${esc(a.linkText || "More")} ↗</a>` : ""}</span></div></li>`).join("");
 
   $("#timeline").innerHTML = SITE.timeline.map((t) => `
     <li class="${t.kind}">

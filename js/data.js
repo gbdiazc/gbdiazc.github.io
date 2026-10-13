@@ -95,6 +95,23 @@ const SITE = {
   publications: [
     {
       type: "journal",
+      year: 2026,
+      title: "TeV gamma-ray spectral spikes produced by magnetic reconnection in blazar jets: The case of the 2014 high state of Markarian 501",
+      authors: "J. G. Giesbrecht Formiga Paiva, E. M. de Gouveia Dal Pino, J. C. Rodríguez-Ramírez, U. Barres de Almeida, G. B. Díaz-Cortés",
+      venue: "Journal of High Energy Astrophysics, 54, 100655",
+      doi: "10.1016/j.jheap.2026.100655",
+      url: "https://www.sciencedirect.com/science/article/pii/S2214404826001060",
+      featured: false,
+      bibtex: `@article{Giesbrecht26,
+  author  = {Giesbrecht Formiga Paiva, J. G. and de Gouveia Dal Pino, E. M. and Rodríguez-Ramírez, J. C. and Barres de Almeida, U. and Díaz-Cortés, G. B.},
+  title   = {{TeV} gamma-ray spectral spikes produced by magnetic reconnection in blazar jets: The case of the 2014 high state of {Markarian} 501},
+  journal = {Journal of High Energy Astrophysics},
+  year    = {2026}, volume = {54}, pages = {100655},
+  doi     = {10.1016/j.jheap.2026.100655}
+}`,
+    },
+    {
+      type: "journal",
       year: 2025,
       title: "Evolutionary algorithms applied to minimize the thermal transport in atomic nanoribbons",
       authors: "J. E. González, G. B. Díaz-Cortés, R. M. del Castillo, R. Espejel, A. Calles",
@@ -318,7 +335,7 @@ const SITE = {
   projects: [
     {
       title: "Energy Transition Roadmap",
-      period: "2025 – present",
+      period: "2025 – 2026",
       org: "IMP",
       text: "Technology roadmap for the Mexican energy transition: baselines, gap analysis and prospective scenarios.",
       tags: ["Roadmapping", "Energy"],
@@ -392,6 +409,13 @@ const SITE = {
       kind: "work",
     },
     {
+      year: "2025 — present",
+      title: "Master in Artificial Intelligence & Big Data",
+      org: "Universidad Antonio de Nebrija · Structuralia, Spain",
+      text: "Continuing-education master's program, currently in progress.",
+      kind: "edu",
+    },
+    {
       year: "2021 — 2024",
       title: "Visiting Professor, AI Laboratory",
       org: "Computing Research Center, CIC-IPN, Mexico City",
@@ -433,6 +457,8 @@ const SITE = {
     { name: "Emmanuel A. Cabrera Navarrete", degree: "PhD · main tutor", topic: "Physics-informed machine learning for fluid flow in porous media", org: "IMP", status: "2024 – present", done: false },
     { name: "Patricia Domínguez Ramírez", degree: "PhD · main tutor", topic: "Operating-window optimization through mathematical modeling & AI", org: "IMP", status: "2025 – present", done: false },
     { name: "Sindy D. Puerto Vargas", degree: "PhD · committee", topic: "AI models for hydrogen production from biomass gasification", org: "IMP", status: "Ongoing", done: false },
+    { name: "José Samuel Espinosa Cuellar", degree: "Summer research program (BUAP) · advisor", topic: "AI-assisted petrophysical characterization of well logs (K-Means and KNN)", org: "IMP Summer Research Program 2026", status: "2026", done: true, link: "https://samuel19-cpu.github.io/Extrayendo-PEtroleo-con-IA/", linkText: "View project" },
+    { name: "Areli Monserrat Santana Guerrero", degree: "BSc thesis (IPN) · advisor", topic: "Modeling of geological hydrogen transport towards the surface", org: "IMP", status: "2026", done: false, link: "assets/img/poster-areli.jpg", linkText: "View poster" },
     { name: "Jenny Tjan", degree: "MSc · main tutor", topic: "Deflation techniques and POD methods for Krylov subspace acceleration", org: "TU Delft", status: "Graduated 2018", done: true },
     { name: "Rodrigo Vázquez Garduño", degree: "Internship · main tutor", topic: "Reservoir simulation", org: "IMP", status: "2022", done: true },
     { name: "Mario Espinosa Cortés", degree: "Internship · main tutor", topic: "Database management for bibliometric analysis", org: "IMP", status: "2023", done: true },
@@ -447,7 +473,7 @@ const SITE = {
     { course: "Introduction to Scientific Computing with Python", org: "IMP postgraduate program", when: "2023", role: "Instructor" },
     { course: "Mathematical Methods", org: "CIC-IPN", when: "2021", role: "Instructor" },
     { course: "Linear Programming", org: "CIC-IPN", when: "2021", role: "Instructor" },
-    { course: "Computational Physics", org: "Facultad de Ciencias, UNAM", when: "2025", role: "Teaching assistant" },
+    { course: "Computational Physics", org: "Facultad de Ciencias, UNAM", when: "2025 · 2026-1", role: "Teaching assistant" },
     { course: "Fundamentals & Applications of Data Science", org: "IMP", when: "2021", role: "Teaching assistant" },
     { course: "Numerical Mathematics (practical work)", org: "EEMCS, TU Delft", when: "2014 – 2017", role: "Teaching assistant" },
     { course: "Differential Equations (practical work)", org: "EEMCS, TU Delft", when: "2015 – 2017", role: "Teaching assistant" },
@@ -472,6 +498,7 @@ const SITE = {
 
   // ------------------------------------------------------- awards & training
   awards: [
+    { year: 2026, title: "Poster jury, 2nd IMP Graduate Week", detail: "Juror of the poster session, area Hydrocarbon Exploration and Exploitation (Oct 6–9, 2026).", link: "assets/img/constancia-jurado-2026.jpg", linkText: "View certificate" },
     { year: 2022, title: "National Supercomputing Laboratory (LNS) Award", detail: "Computing grant — ML techniques applied to the modeling of physical systems." },
     { year: 2019, title: "National Standard of Competency EC0217", detail: "CONOCER certification for teaching in-person group training courses." },
     { year: 2018, title: "SIAM Student Chapter Certificate of Recognition", detail: "Service as secretary, TU Delft SIAM Student Chapter." },
@@ -494,6 +521,32 @@ const SITE = {
     { name: "French", level: "Advanced", pct: 75 },
     { name: "German", level: "Basic", pct: 35 },
     { name: "Dutch", level: "Basic", pct: 35 },
+  ],
+
+  // ------------------------------------------------------------ student work
+  // Posters and projects by students I advise (shown under Mentoring).
+  studentWork: [
+    {
+      title: "Extrayendo petróleo con IA",
+      student: "José Samuel Espinosa Cuellar · BUAP",
+      event: "IMP Summer Research Program 2026",
+      text: "AI-assisted petrophysical characterization: LAS well-log processing in Python, net-pay estimation, K-Means electrofacies and KNN lithology classification.",
+      image: "assets/img/poster-samuel.webp",
+      links: [
+        { label: "Open project", url: "https://samuel19-cpu.github.io/Extrayendo-PEtroleo-con-IA/" },
+        { label: "View poster", url: "assets/img/poster-samuel.webp" },
+      ],
+    },
+    {
+      title: "Hidrógeno geológico: de fallas profundas a “círculos de hadas” superficiales",
+      student: "Areli Monserrat Santana-Guerrero · IPN",
+      event: "2nd IMP Graduate Week 2026 · Oct 6–9",
+      text: "Numerical simulation of the geological hydrogen system, from generation by serpentinization to migration towards the surface.",
+      image: "assets/img/poster-areli.jpg",
+      links: [
+        { label: "View poster", url: "assets/img/poster-areli.jpg" },
+      ],
+    },
   ],
 
   // -------------------------------------------------------------- notebooks
